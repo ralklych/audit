@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Экспресс-аудит · Координатор</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#15171a;--bg2:#1c1f23;--line:#2c3036;--tx:#eceef0;--mut:#8f949b;--ag:#b9bdc3;--au:#d8cdb8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--tx);font:300 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+.w{max-width:560px;margin:0 auto;padding:28px 22px 56px}
+.brand{font:500 12px Inter,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--ag);display:flex;align-items:center;gap:12px}
+.brand:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--au),transparent)}
+h1,h2{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:.01em;margin:0}
+h1{font-size:40px;line-height:1.08;margin:48px 0 18px}
+h2{font-size:28px;line-height:1.2;margin:0 0 22px}
+p{margin:0 0 14px;color:var(--mut)}
+.hair{height:1px;background:var(--line);margin:30px 0}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;cursor:pointer;font:400 13px Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--tx);background:transparent;border:1px solid var(--au);padding:17px 20px;border-radius:2px;transition:background .2s,color .2s}
+.btn:hover,.btn:active{background:var(--au);color:var(--bg)}
+.btn.s{border-color:var(--line);color:var(--ag);margin-top:12px}
+.meta{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-bottom:14px}
+.bar{height:1px;background:var(--line);margin-bottom:30px}
+.bar i{display:block;height:1px;background:var(--au);width:0;transition:width .35s}
+.opt{display:block;width:100%;text-align:left;font:300 16px/1.45 Inter,sans-serif;color:var(--tx);background:var(--bg2);border:1px solid var(--line);border-radius:2px;padding:16px 18px;margin-bottom:10px;cursor:pointer;transition:border-color .2s}
+.opt:hover,.opt:active,.opt:focus-visible{border-color:var(--au);outline:none}
+.z{padding:16px 0;border-bottom:1px solid var(--line)}
+.zh{display:flex;justify-content:space-between;gap:12px;font-size:15px;margin-bottom:10px}
+.zh span:last-child{color:var(--au);font-size:11px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;padding-top:3px}
+.zt{height:1px;background:var(--line);position:relative}
+.zt i{position:absolute;left:0;top:-1px;height:3px;background:var(--ag)}
+.z.top .zt i{background:var(--au)}
+.rec{border:1px solid var(--line);border-left:1px solid var(--au);padding:18px;margin:26px 0 22px;background:var(--bg2)}
+.rec h3{margin:0 0 8px;font:500 12px Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--au)}
+.rec p{margin:0;color:var(--tx)}
+.eco{margin:0 0 26px}.eco h3{margin:0 0 12px;font:500 12px Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}.chip{display:inline-block;border:1px solid var(--line);padding:7px 12px;margin:0 8px 8px 0;font-size:13px;color:var(--ag)}.chip.on{border-color:var(--au);color:var(--tx)}
+.ch{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:6px}.ch .btn{margin-top:0;padding:14px 8px;letter-spacing:.12em}
+.hide{display:none}
+.fine{font-size:12px;color:var(--mut);margin-top:22px}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="brand">Координатор</div>
+
+<section id="s0">
+<h1>Экспресс-аудит бизнеса: что даст вам максимум прямо сейчас</h1>
+<p>Шесть уровней, 10 вопросов, 4 минуты. Новые правила маркетплейсов, данные продавцов в ФНС, НДС и дорогие деньги меняют рынок. Пройдите квест и получите приоритеты вашего бизнеса и конкретный первый шаг.</p>
+<div class="hair"></div>
+<button class="btn" id="go">Начать</button>
+<p class="fine">Координатор: экосистема для бизнеса. Консалтинг и аудит, автоматизация Б24 и 1С, IT-разработка, маркетинг (Dr.Marketing), маркетплейсы и поставщики (WildDag), обучение ИИ (AIQ), бухгалтерия, право и HR (KonsultHall), международное направление.</p>
+</section>
+
+<section id="s1" class="hide">
+<div class="meta" id="cnt"></div>
+<div class="bar"><i id="pr"></i></div>
+<h2 id="q"></h2>
+<div id="as"></div>
+</section>
+
+<section id="s2" class="hide">
+<div class="meta">Ваши приоритеты</div>
+<h2 id="rt"></h2>
+<div id="zs"></div>
+<div class="rec"><h3 id="rh"></h3><p id="rp"></p><p id="rf" style="margin-top:10px;color:var(--mut)"></p></div>
+<div class="eco"><h3>Что ещё делает Координатор</h3><div id="eco"></div></div>
+<button class="btn" id="cp">Скопировать результат</button>
+<p class="fine" style="margin:20px 0 10px">Или отправьте нам в мессенджер, сообщение подставится автоматически:</p>
+<div class="ch"><a class="btn s" id="tg" href="#" target="_blank" rel="noopener">Telegram</a><a class="btn s" id="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a class="btn s" id="ml" href="#" target="_blank" rel="noopener">Почта</a></div>
+<button class="btn s" id="rs">Пройти заново</button>
+<p class="fine">Если текст не подставился в мессенджере, нажмите «Скопировать результат» и вставьте его в чат. Оценка ориентировочная и не заменяет консультацию бухгалтера или юриста.</p>
+</section>
+</div>
+
+<script>
+var CONTACT_URL = "https://t.me/ralklych";
+var WA_PHONE = "79931447656"; /* номер для WhatsApp в формате 79991234567 */
+var EMAIL = "audit@koordinator.pro"; /* почта для заявок */
+
+var D = [
+ {n:"WildDag: маркетплейсы и поставщики",mx:4,l:"Маркетплейсы",t:"Маркетплейсы и поставщики",s:"Посчитать юнит-экономику по пяти ключевым товарам с учётом комиссий, логистики и НДС.",h:"Начните с маркетплейсов",p:"Юнит-экономика, налоги по новым правилам, выход на Wildberries и поиск поставщиков в Китае, Кыргызстане и Узбекистане. Ведём от выхода на площадки до закупок."},
+ {n:"AIQ: обучение ИИ",mx:2,l:"ИИ",t:"Обучение ИИ",s:"Выбрать 2-3 рутинные задачи и передать их ИИ с проверкой результата.",h:"Начните с ИИ",p:"ИИ быстрее всего снимает рутину в контенте, аналитике и поддержке. Школа AIQ учит применять его в работе, а не ради моды."},
+ {n:"Координатор: бизнес-архитектура, финансы, IT",mx:6,l:"Система и IT",t:"Система, финансы и IT",s:"Нарисовать путь клиента и найти места, где теряются заявки и деньги.",h:"Начните с системы",p:"Аудит бизнес-модели и финансов, автоматизация на Битрикс24 и 1С, IT-разработка. Это ядро Координатора."},
+ {n:"Маркетинг",mx:2,l:"Маркетинг",t:"Маркетинг",s:"Определить главный канал заявок и посчитать стоимость клиента.",h:"Начните с маркетинга",p:"Системный поток заявок: реклама, контент, воронка. Когда площадки дорожают, собственный канал привлечения становится опорой."},
+ {n:"Бухгалтерия, право, HR",mx:4,l:"Финансы и право",t:"Бухгалтерия, право и HR",s:"Сверить учёт с отчётами площадок и проверить налоговый режим с учётом НДС.",h:"Начните с порядка в учёте и праве",p:"Бухгалтерия под НДС и данные ФНС, юридическое сопровождение и HR. Всё это есть в Координаторе."},
+ {n:"Международное направление",mx:2,l:"Международный рост",t:"Международный рост",s:"Выбрать страну и модель присутствия: партнёр, представительство или юрлицо.",h:"Начните с выхода за границу",p:"Зарубежное представительство, поиск партнёров за рубежом и юридическое представительство в Турции."}
+];
+var E=[["Бизнес-архитектура: аудит модели",2],["Финансовый аудит",2],["Автоматизация Б24 и 1С",2],["IT-разработка",2],["Маркетинг",3],["Выход на маркетплейсы (WildDag)",0],["Поиск поставщиков: Китай, Кыргызстан, Узбекистан (WildDag)",0],["Обучение ИИ (AIQ)",1],["Бухгалтерия",4],["Юридическое сопровождение",4],["HR",4],["Зарубежное представительство",5],["Поиск партнёров за рубежом",5],["Юридическое представительство в Турции",5]];
+var Q = [
+ {d:0,q:"Что у вас с маркетплейсами после новых правил и передачи данных в ФНС?",a:[["Продаю, но маржа тает, а налоги и учёт тревожат",2],["Планирую выйти или только присматриваюсь",2],["Не работаю с маркетплейсами и не планирую",0]]},
+ {d:0,q:"Как с поставщиками и товаром?",a:[["Ищу поставщиков в Китае, Кыргызстане или Узбекистане",2],["Есть, но дорого или нестабильно",1],["Всё налажено",0]]},
+ {d:1,q:"Как ваша команда использует ИИ?",a:[["Не используем или единицы пробуют без системы",2],["Используем, но хотим глубже",1],["Внедрено в процессы",0]]},
+ {d:2,q:"Как вы работаете с клиентами и заявками?",a:[["Excel, мессенджеры, всё в голове",2],["Битрикс24 или 1С есть, но не настроены",2],["Система работает, данные в порядке",0]]},
+ {d:2,q:"Видите ли вы, где бизнес теряет деньги?",a:[["Нет, нужен аудит модели и финансов",2],["Учёт есть, плана роста нет",1],["Модель и цифры под контролем",0]]},
+ {d:2,q:"Нужна ли разработка: сайт, бот, интеграция или своя система?",a:[["Да, есть конкретная задача",2],["Возможно, но не знаю что",1],["Нет",0]]},
+ {d:3,q:"Откуда приходят клиенты?",a:[["Реклама дорожает, заявки не окупаются",2],["Случайно и по рекомендациям",2],["Стабильный поток",0]]},
+ {d:4,q:"Как вы готовитесь к НДС и прозрачности данных для ФНС?",a:[["Не понимаю, как перестроиться, нужен бухгалтер",2],["Бухгалтер считает, но плана нет",1],["Всё продумано",0]]},
+ {d:4,q:"Как у вас с договорами, спорами и персоналом?",a:[["Договоры, споры или найм без системы",2],["Решаем по ситуации",1],["Есть юрист и HR",0]]},
+ {d:5,q:"Думаете о зарубежных рынках, партнёрах или представительстве, например в Турции?",a:[["Да, ищу партнёров или представительство",2],["Присматриваюсь",1],["Нет",0]]}
+];
+var i=0,sc=[0,0,0,0,0,0];
+function $(id){return document.getElementById(id)}
+function show(n){for(var k=0;k<3;k++)$("s"+k).classList.toggle("hide",k!==n);window.scrollTo(0,0)}
+function ask(){
+ var o=Q[i];$("cnt").textContent="Уровень "+(o.d+1)+" · "+D[o.d].l+" · "+(i+1)+"/"+Q.length;
+ $("pr").style.width=(i/Q.length*100)+"%";$("q").textContent=o.q;
+ var h=$("as");h.innerHTML="";
+ o.a.forEach(function(t){var b=document.createElement("button");b.className="opt";b.textContent=t[0];
+  b.onclick=function(){sc[o.d]+=t[1];i++;i<Q.length?ask():fin()};h.appendChild(b)})
+}
+function lv(p){return p>=60?"Высокий запрос":p>=30?"Средний запрос":"Низкий запрос"}
+function fin(){
+ var r=D.map(function(d,k){return {k:k,p:Math.round(sc[k]/d.mx*100)}});
+ r.sort(function(a,b){return b.p-a.p});
+ var t=D[r[0].k];
+ $("rt").textContent=r[0].p<30?"Крепкая база: вы готовы к росту":"Ваш приоритет: "+t.t;
+ var zs=$("zs");zs.innerHTML="";
+ r.forEach(function(x,j){var d=document.createElement("div");d.className="z"+(j==0&&x.p>=30?" top":"");
+  d.innerHTML='<div class="zh"><span>'+D[x.k].n+'</span><span>'+lv(x.p)+'</span></div><div class="zt"><i style="width:'+x.p+'%"></i></div>';zs.appendChild(d)});
+ $("eco").innerHTML=E.map(function(e){return '<span class="chip'+(e[1]==r[0].k?" on":"")+'">'+e[0]+"</span>"}).join("");$("rh").textContent=t.h;$("rp").textContent=t.p;$("rf").textContent="Первый шаг: "+t.s;
+ var top=r[0].p<30?"бизнес устойчив, хочу обсудить рост":t.t;
+ var msg="Здравствуйте! Прошёл(а) экспресс-аудит Координатора.\nГлавный приоритет: "+top+".\nРейтинг запросов: "+r.map(function(x){return D[x.k].t+" - "+lv(x.p)}).join("; ")+".\nХочу получить бесплатный разбор.";
+ window._txt=msg;var en=encodeURIComponent(msg);$("cp").textContent="Скопировать результат";
+ $("tg").href=CONTACT_URL+"?text="+en;
+ $("wa").href="https://wa.me/"+WA_PHONE+"?text="+en;$("wa").style.display=WA_PHONE?"":"none";
+ $("ml").href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Экспресс-аудит Координатора")+"&body="+en;$("ml").style.display=EMAIL?"":"none";
+ $("pr").style.width="100%";show(2)
+}
+$("go").onclick=function(){i=0;sc=[0,0,0,0,0,0];show(1);ask()};
+$("rs").onclick=function(){show(0)};
+$("cp").onclick=function(){var b=$("cp");
+ function ok(){b.textContent="Скопировано"}
+ try{navigator.clipboard.writeText(window._txt).then(ok,ok)}catch(e){ok()}};
+</script>
+</body>
+</html>
